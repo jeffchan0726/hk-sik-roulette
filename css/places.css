@@ -1,0 +1,5 @@
+.place-search{width:100%;margin:0 0 12px;padding:12px 14px;border-radius:12px;border:1px solid var(--line);background:#140c18;color:var(--ink);font:inherit}
+.place-filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+.place-filters .chip{font-size:.85rem}
+.place-group{margin:14px 0}
+.place-group h3{margin:0 0 8px;font-size:.92rem;color:var(--cyan)}
