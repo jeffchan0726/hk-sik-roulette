@@ -7,27 +7,24 @@
   <title>香港搜食輪盤</title>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/picker.css" />
+  <link rel="stylesheet" href="css/places.css" />
 </head>
 <body>
-  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-grid"></div>
   <div class="app">
     <header class="topbar">
-      <div class="brand"><div class="logo">食</div><div><h1 id="titleText">香港搜食輪盤</h1><p class="tagline" id="tagline">撿地點之後交俶輪盤 · OpenRice</p></div></div>
+      <div class="brand"><div class="logo">食</div><div><h1 id="titleText">香港搜食輪盤</h1><p class="tagline" id="tagline">撿地點之後交俶輪盤</p></div></div>
       <div class="top-actions"><button class="chip active" id="btnZh" type="button">繁</button><button class="chip" id="btnEn" type="button">EN</button><button class="chip" id="btnSound" type="button">音效開</button></div>
     </header>
-    <div id="hkBanner" class="banner" role="status"></div>
+    <div id="hkBanner" class="banner"></div>
     <div id="statusPill" class="status-pill">請先撿地點。</div>
     <section id="viewDistrict" class="view active card">
-      <h2>地點</h2>
-      <p class="lead" id="pickHint">地區、地標、地鐵站或酒店</p>
+      <h2>你喺邊度食？</h2>
+      <p class="lead" id="pickHint">搜地區、商場、地鐵站或酒店，撲個名就得</p>
       <div class="geo-row"><button class="btn primary" id="btnGeo" type="button">用我而家位置</button></div>
-      <div class="or-picker">
-        <label class="or-search"><input id="placeSearch" type="search" placeholder="地區、地標、地鐵站或酒店" autocomplete="off" /></label>
-        <div class="or-chips" id="placeChips"></div>
-        <div class="or-body"><nav class="or-side" id="placeCats"></nav><nav class="or-side or-sub" id="placeRegions"></nav><div class="or-list" id="placeList"></div></div>
-        <div class="or-foot"><button class="btn" id="btnClearPlace" type="button">繼續撿選</button><button class="btn gold" id="btnConfirmPlace" type="button" disabled>確定</button></div>
-      </div>
+      <input id="placeSearch" class="place-search" type="search" placeholder="搜：西環、朗豪坊、東涌站…" autocomplete="off" />
+      <div class="place-filters" id="placeFilters"></div>
+      <div id="placeMount"></div>
     </section>
     <section id="viewWheels" class="view">
       <div class="wheels two">
