@@ -1,5 +1,8 @@
-.place-search{width:100%;margin:0 0 12px;padding:12px 14px;border-radius:12px;border:1px solid var(--line);background:#140c18;color:var(--ink);font:inherit}
-.place-filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
-.place-filters .chip{font-size:.85rem}
-.place-group{margin:14px 0}
-.place-group h3{margin:0 0 8px;font-size:.92rem;color:var(--cyan)}
+.place-search{width:100%;margin:0 0 12px;background:#22151f;border:1px solid var(--line);color:var(--ink);border-radius:12px;padding:12px 14px;font:inherit}
+.place-filters{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px}
+.place-filters button{border:1px solid var(--line);background:rgba(255,255,255,.04);color:var(--muted);border-radius:999px;padding:6px 12px;font:inherit;cursor:pointer}
+.place-filters button.on{border-color:var(--gold);color:var(--gold);background:rgba(255,200,87,.12)}
+.place-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(118px,1fr));gap:8px}
+.place-btn{text-align:left;background:#140c18;border:1px solid var(--line);color:var(--ink);border-radius:12px;padding:10px;cursor:pointer;font:inherit;line-height:1.25}
+.place-btn small{display:block;color:var(--muted);font-size:.72rem}
+.place-btn.on,.place-btn:hover{border-color:var(--gold)}
