@@ -3,30 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="香港搜食輪盤 — OpenRice 式撿地點 + 輪盤搜舖。" />
   <meta name="geo.region" content="HK" />
-  <title>香港搜食輪盤 · HK Eat Wheel</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <title>香港搜食輪盤</title>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/picker.css" />
 </head>
 <body>
   <div class="bg-grid" aria-hidden="true"></div>
   <div class="app">
     <header class="topbar">
-      <div class="brand">
-        <div class="logo" aria-hidden="true">食</div>
-        <div>
-          <h1 id="titleText">香港搜食輪盤</h1>
-          <p class="tagline" id="tagline">撿地點之後交俶輪盤 · 用 OpenRice 搜香港舖</p>
-        </div>
-      </div>
-      <div class="top-actions">
-        <button class="chip active" id="btnZh" type="button">繁</button>
-        <button class="chip" id="btnEn" type="button">EN</button>
-        <button class="chip" id="btnSound" type="button">音效開</button>
-      </div>
+      <div class="brand"><div class="logo">食</div><div><h1 id="titleText">香港搜食輪盤</h1><p class="tagline" id="tagline">撿地點之後交俶輪盤 · OpenRice</p></div></div>
+      <div class="top-actions"><button class="chip active" id="btnZh" type="button">繁</button><button class="chip" id="btnEn" type="button">EN</button><button class="chip" id="btnSound" type="button">音效開</button></div>
     </header>
     <div id="hkBanner" class="banner" role="status"></div>
     <div id="statusPill" class="status-pill">請先撿地點。</div>
@@ -37,46 +25,25 @@
       <div class="or-picker">
         <label class="or-search"><input id="placeSearch" type="search" placeholder="地區、地標、地鐵站或酒店" autocomplete="off" /></label>
         <div class="or-chips" id="placeChips"></div>
-        <div class="or-body">
-          <nav class="or-side" id="placeCats"></nav>
-          <nav class="or-side or-sub" id="placeRegions"></nav>
-          <div class="or-list" id="placeList"></div>
-        </div>
-        <div class="or-foot">
-          <button class="btn" id="btnClearPlace" type="button">繼續撿選</button>
-          <button class="btn gold" id="btnConfirmPlace" type="button" disabled>確定</button>
-        </div>
+        <div class="or-body"><nav class="or-side" id="placeCats"></nav><nav class="or-side or-sub" id="placeRegions"></nav><div class="or-list" id="placeList"></div></div>
+        <div class="or-foot"><button class="btn" id="btnClearPlace" type="button">繼續撿選</button><button class="btn gold" id="btnConfirmPlace" type="button" disabled>確定</button></div>
       </div>
     </section>
     <section id="viewWheels" class="view">
       <div class="wheels two">
-        <article class="wheel-card card">
-          <h3 id="catTitle">嘢食大類</h3><p id="catPick"></p>
-          <div class="wheel-stage"><div class="pointer"></div><div class="wheel" id="catWheel"><div class="hub"></div></div></div>
-          <button class="btn gold" id="btnSpinCat" type="button" disabled>轉大類</button>
-        </article>
-        <article class="wheel-card card">
-          <h3 id="shopTitle">舖頭名</h3><p id="shopPick"></p>
-          <div class="wheel-stage"><div class="pointer"></div><div class="wheel" id="shopWheel"><div class="hub"></div></div></div>
-          <button class="btn gold" id="btnSpinShop" type="button" disabled>轉舖頭</button>
-        </article>
+        <article class="wheel-card card"><h3 id="catTitle">嘢食大類</h3><p id="catPick"></p><div class="wheel-stage"><div class="pointer"></div><div class="wheel" id="catWheel"><div class="hub"></div></div></div><button class="btn gold" id="btnSpinCat" type="button" disabled>轉大類</button></article>
+        <article class="wheel-card card"><h3 id="shopTitle">舖頭名</h3><p id="shopPick"></p><div class="wheel-stage"><div class="pointer"></div><div class="wheel" id="shopWheel"><div class="hub"></div></div></div><button class="btn gold" id="btnSpinShop" type="button" disabled>轉舖頭</button></article>
       </div>
       <div class="actions"><button class="btn" id="btnChange" type="button">換區</button></div>
     </section>
     <section id="viewResult" class="view card">
       <div id="resultBody"></div>
-      <div class="map-wrap"><iframe id="mapFrame" title="Google 地圖" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
-      <div class="actions">
-        <a class="btn gold" id="btnOpenrice" href="#" target="_blank" rel="noopener">OpenRice</a>
-        <a class="btn primary" id="btnMaps" href="#" target="_blank" rel="noopener">Google Maps</a>
-        <button class="btn" id="btnCopy" type="button">複製</button>
-        <button class="btn gold" id="btnAgain" type="button">再轉過</button>
-        <button class="btn" id="btnChange2" type="button">換區</button>
-      </div>
+      <div class="map-wrap"><iframe id="mapFrame" title="map" loading="lazy"></iframe></div>
+      <div class="actions"><a class="btn gold" id="btnOpenrice" href="#" target="_blank" rel="noopener">OpenRice</a><a class="btn primary" id="btnMaps" href="#" target="_blank" rel="noopener">Google Maps</a><button class="btn" id="btnCopy" type="button">複製</button><button class="btn gold" id="btnAgain" type="button">再轉過</button><button class="btn" id="btnChange2" type="button">換區</button></div>
     </section>
     <footer class="site-footer"><p><strong>專為香港而設 · Hong Kong Only</strong></p></footer>
   </div>
-  <div id="toast" class="toast" role="status"></div>
+  <div id="toast" class="toast"></div>
   <script src="data/places.js"></script>
   <script src="js/app.js"></script>
 </body>
