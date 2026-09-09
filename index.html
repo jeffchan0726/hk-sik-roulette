@@ -42,7 +42,7 @@
     </section>
 
     <section id="viewWheels" class="view">
-      <div class="wheels">
+      <div class="wheels two">
         <article class="wheel-card card">
           <h3 id="catTitle">嘢食大類</h3>
           <p id="catPick"></p>
@@ -53,26 +53,16 @@
           <button class="btn gold" id="btnSpinCat" type="button" disabled>轉大類</button>
         </article>
         <article class="wheel-card card">
-          <h3 id="subTitle">細類</h3>
-          <p id="subPick"></p>
+          <h3 id="shopTitle">舖頭名</h3>
+          <p id="shopPick"></p>
           <div class="wheel-stage">
             <div class="pointer"></div>
-            <div class="wheel" id="subWheel"><div class="hub"></div></div>
+            <div class="wheel" id="shopWheel"><div class="hub"></div></div>
           </div>
-          <button class="btn gold" id="btnSpinSub" type="button" disabled>轉細類</button>
-        </article>
-        <article class="wheel-card card">
-          <h3 id="budgetTitle">預算</h3>
-          <p id="budgetPick"></p>
-          <div class="wheel-stage">
-            <div class="pointer"></div>
-            <div class="wheel" id="budgetWheel"><div class="hub"></div></div>
-          </div>
-          <button class="btn gold" id="btnSpinBudget" type="button" disabled>轉預算</button>
+          <button class="btn gold" id="btnSpinShop" type="button" disabled>轉舖頭</button>
         </article>
       </div>
       <div class="actions">
-        <button class="btn primary" id="btnGo" type="button" disabled>開飯！</button>
         <button class="btn" id="btnChange" type="button">換區</button>
       </div>
     </section>
@@ -83,7 +73,8 @@
         <iframe id="mapFrame" title="Google 地圖 — 香港食店位置" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
       <div class="actions">
-        <a class="btn primary" id="btnMaps" href="#" target="_blank" rel="noopener">喺 Google Maps 打開</a>
+        <a class="btn primary" id="btnMaps" href="#" target="_blank" rel="noopener">Google Maps</a>
+        <a class="btn gold" id="btnOpenrice" href="#" target="_blank" rel="noopener">OpenRice</a>
         <button class="btn" id="btnCopy" type="button">複製地址</button>
         <button class="btn gold" id="btnAgain" type="button">再轉過</button>
         <button class="btn" id="btnChange2" type="button">換區</button>
@@ -98,7 +89,7 @@
         九龍：油尖旺區、深水埙區、九龍城區、黃大仙區、觀塘區　
         新界：葵青區、荃灣區、屯門區、元朗區、北區、大埔區、沙田區、西貢區、離島區
       </p>
-      <p>演示資料為虛構店名 + 該區真實街道。地圖搜尋關鍵字固定包含「香港」。</p>
+      <p>演示資料為虛構店名 + 該區真實街道。地圖與 OpenRice 搜尋關鍵字固定包含「香港」。</p>
     </footer>
   </div>
   <div id="toast" class="toast" role="status"></div>
